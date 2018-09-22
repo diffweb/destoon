@@ -15,7 +15,7 @@ function PhotoLast() {
 }
 </script>
 <div class="m">	
-	<div class="nav"><span class="f_r"><a href="{$MOD[linkurl]}{rewrite('view.php?itemid='.$itemid)}#p" class="b">全部展开</a></span><a href="{$MODULE[1][linkurl]}">首页</a> <i>&gt;</i> <a href="{$MOD[linkurl]}">{$MOD[name]}</a> <i>&gt;</i> {cat_pos($CAT, ' <i>&gt;</i> ')}</div>
+	<div class="nav"><div><img src="{DT_SKIN}image/ico-like.png" class="share" title="加入收藏" onclick="SendFav({$moduleid}, {$itemid});"/><img src="{DT_SKIN}image/ico-share.png" class="share" title="分享好友" onclick="Dshare({$moduleid}, {$itemid});"/></div><a href="{$MODULE[1][linkurl]}">首页</a> <i>&gt;</i> <a href="{$MOD[linkurl]}">{$MOD[name]}</a> <i>&gt;</i> {cat_pos($CAT, ' <i>&gt;</i> ')}</div>
 </div>
 <div class="m">
 	<div class="photo_f">
@@ -31,7 +31,8 @@ function PhotoLast() {
 			日期：{$adddate}&nbsp;&nbsp;&nbsp;&nbsp;
 			{if $MOD[hits]}点击：<span id="hits">{$hits}</span>&nbsp;&nbsp;&nbsp;&nbsp;{/if}
 			{if $could_comment}<a href="{$EXT[comment_url]}{rewrite('index.php?mid='.$moduleid.'&itemid='.$itemid)}"><span style="color:#F1F1F1;">评论：{$comments}</span></a>&nbsp;&nbsp;&nbsp;&nbsp;{/if}
-			<span onclick="View(Dd('destoon_photo').src);" class="c_p">查看原图</span>
+			<span onclick="Go('{$MOD[linkurl]}{rewrite('view.php?itemid='.$itemid)}#p');" class="c_p">展开全部</span>&nbsp;&nbsp;&nbsp;&nbsp;
+			<span onclick="View(Dd('photo').src);" class="c_p">查看原图</span>
 			</div>
 		</div>
 	</div>

@@ -232,7 +232,7 @@ a.g:hover {color:#FF6600;}
 .related {padding:10px 16px;line-height:32px;}
 .related a {font-size:14px;}
 .keylink {font-weight:normal;padding:0 3px 0 3px;}
-.share {width:20px;height:20px;cursor:pointer;}
+.share {width:20px;height:20px;cursor:pointer;margin-left:10px;}
 .share:hover {width:24px;height:24px;}
 .award {padding:32px;text-align:center;}
 .award div {width:80px;height:44px;line-height:44px;font-size:20px;font-weight:bold;letter-spacing:2px;margin:auto;background:#FFFFFF;color:#E94657;border:#E94657 2px solid;border-radius:10px;cursor:pointer;}

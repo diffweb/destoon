@@ -7,7 +7,7 @@ defined('IN_DESTOON') or exit('Access Denied');
 require DT_ROOT.'/include/mobile.func.php';
 if(is_pc() && strpos($DT_URL, 'device.php') === false) dheader(DT_PATH.'api/mobile.php?action=device&uri='.urlencode($head_pc));
 include load('mobile.lang');
-$EXT['mobile_enable'] or mobile_msg($L['msg_mobile_close']);
+$EXT['mobile_enable'] or message($L['msg_mobile_close']);
 if($DT_BOT) $EXT['mobile_ajax'] = 0;
 $dmobile = get_cookie('mobile');
 if($dmobile == '' || $dmobile == 'pc') set_cookie('mobile', 'touch', $DT_TIME + 30*86400);

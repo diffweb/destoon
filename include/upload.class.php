@@ -30,6 +30,7 @@ class upload {
 			$this->file_size = $file['size'];
 			$this->file_type = $file['type'];
 			$this->file_error = $file['error'];
+			break;
 		}
 		$this->userid = $_userid;
 		$this->ext = file_ext($this->file_name);
@@ -62,6 +63,11 @@ class upload {
 		if(!$this->fileformat) return false;
 		if(!preg_match("/^(".$this->fileformat.")$/i", $this->ext)) return false;
 		if(preg_match("/^(php|phtml|php3|php4|jsp|exe|dll|cer|shtml|shtm|asp|asa|aspx|asax|ashx|cgi|fcgi|pl)$/i", $this->ext)) return false;
+		if($this->savename) {
+			$ext = file_ext($this->savename);
+			if(!preg_match("/^(".$this->fileformat.")$/i", $ext)) return false;
+			if(preg_match("/^(php|phtml|php3|php4|jsp|exe|dll|cer|shtml|shtm|asp|asa|aspx|asax|ashx|cgi|fcgi|pl)$/i", $ext)) return false;
+		}
 		return true;
     }
 

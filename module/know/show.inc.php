@@ -77,7 +77,7 @@ if($DT_PC) {
 		if($r) $could_answer = false;
 	}
 	$CAT = get_cat($catid);
-	if(!check_group($_groupid, $MOD['group_show']) || !check_group($_groupid, $CAT['group_show'])) mobile_msg($L['msg_no_right']);
+	if(!check_group($_groupid, $MOD['group_show']) || !check_group($_groupid, $CAT['group_show'])) message($L['msg_no_right']);
 	$answers = $best = $E = array();
 	$member = array();
 	$fee = get_fee($item['fee'], $MOD['fee_view']);

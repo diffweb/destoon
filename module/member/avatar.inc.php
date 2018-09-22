@@ -11,7 +11,7 @@ switch($action) {
 		dheader('?reload='.$DT_TIME);
 	break;
 	case 'upload':
-		if(!$_FILES['file']['size']) {
+		if(!$_FILES['file']['size'] || !is_image($_FILES['file']['name'])) {
 			if($DT_PC) dheader('?action=html&reload='.$DT_TIME);
 			exit('{"error":1,"message":"Error FILE"}');
 		}

@@ -1,6 +1,5 @@
 <?php
 defined('DT_ADMIN') or exit('Access Denied');
-#require DT_ROOT.'/module/'.$module.'/grade.class.php';
 $do = new grade();
 $menus = array (
     array('升级记录', '?moduleid='.$moduleid.'&file='.$file),
@@ -107,7 +106,7 @@ class grade {
 	}
 
 	function edit($post) {
-		global $_username, $GROUP, $L;
+		global $DT, $GROUP, $L, $_username;
 		$item = $this->get_one();
 		$user = $item['username'] ? userinfo($item['username']) : array();		
 		$msg = isset($post['msg']) ? 1 : 0;

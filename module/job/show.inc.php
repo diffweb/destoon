@@ -80,7 +80,7 @@ if($DT_PC) {
 	if($item['groupid'] == 2) message($L['msg_not_exist']);
 	extract($item);
 	$CAT = get_cat($catid);
-	if(!check_group($_groupid, $MOD['group_show']) || !check_group($_groupid, $CAT['group_show'])) mobile_msg($L['msg_no_right']);
+	if(!check_group($_groupid, $MOD['group_show']) || !check_group($_groupid, $CAT['group_show'])) message($L['msg_no_right']);
 	$member = array();
 	$fee = 0;
 	include DT_ROOT.'/mobile/api/contact.inc.php';

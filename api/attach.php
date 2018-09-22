@@ -24,7 +24,7 @@ $title = substr($name, 0, -strlen($ext)-1);
 $title = file_vname($title);
 $title or dheader($url);
 if(strpos($_SERVER['HTTP_USER_AGENT'], 'Firefox') !== false) $title = str_replace(' ', '_', $title);
-if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false) $title = convert($title, DT_CHARSET, 'GBK');
+if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'rv:1') !== false) $title = convert($title, DT_CHARSET, 'GBK');
 $title or dheader($url);
 file_down($localfile, $title.'.'.$ext);
 ?>

@@ -37,7 +37,7 @@
 		<div class="club_info">
 			<span class="f_r">
 			楼主
-			 | <a href="javascript:SendFav();" class="b">收藏</a>
+			 | <a href="javascript:SendFav({$moduleid}, {$itemid});" class="b">收藏</a>
 			 | <a href="javascript:SendReport();" class="b">举报</a>
 			<span class="manage"{if !$admin} style="display:none;"{/if}> | <a href="{$MODULE[2][linkurl]}{$DT[file_my]}?mid={$moduleid}&job=manage&tid={$itemid}" class="b" target="manage">管理</a></span>
 			</span>

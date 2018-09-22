@@ -1,7 +1,7 @@
 {template 'header'}
 <script type="text/javascript">var module_id= {$moduleid},item_id={$itemid},content_id='content',img_max_width={$MOD[max_width]};</script>
 <div class="m">	
-	<div class="nav"><div><img src="{DT_SKIN}image/ico-share.png" class="share" title="分享好友" onclick="Dshare({$moduleid}, {$itemid});"/></div><a href="{$MODULE[1][linkurl]}">首页</a> <i>&gt;</i> <a href="{$MOD[linkurl]}">{$MOD[name]}</a> <i>&gt;</i> {cat_pos($CAT, ' <i>&gt;</i> ')}</div>
+	<div class="nav"><div><img src="{DT_SKIN}image/ico-like.png" class="share" title="加入收藏" onclick="SendFav({$moduleid}, {$itemid});"/><img src="{DT_SKIN}image/ico-share.png" class="share" title="分享好友" onclick="Dshare({$moduleid}, {$itemid});"/></div><a href="{$MODULE[1][linkurl]}">首页</a> <i>&gt;</i> <a href="{$MOD[linkurl]}">{$MOD[name]}</a> <i>&gt;</i> {cat_pos($CAT, ' <i>&gt;</i> ')}</div>
 	<div class="b20 bd-t"></div>
 </div>
 <div class="m">
@@ -25,7 +25,6 @@
 			<div class="b10"></div>
 			<div onclick="PAlbum(Dd('mid_pic'));" class="c_b t_c c_p"><img src="{DT_SKIN}image/ico_zoom.gif" width="16" height="16" align="absmiddle"/> 点击图片查看原图</div>
 			<div class="b10"></div>
-			<div class="t_c"><a href="javascript:;" onclick="SendFav({$moduleid}, {$itemid});" class="b">收藏商品</a></div>
 		</td>
 		<td width="16">&nbsp;</td>
 		<td valign="top">

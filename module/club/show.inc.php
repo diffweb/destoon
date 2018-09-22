@@ -78,7 +78,7 @@ if($DT_PC) {
 	($item && $item['status'] > 2) or message($L['msg_not_exist']);
 	extract($item);
 	$CAT = get_cat($catid);
-	if(!check_group($_groupid, $MOD['group_show']) || !check_group($_groupid, $CAT['group_show'])) mobile_msg($L['msg_no_right']);
+	if(!check_group($_groupid, $MOD['group_show']) || !check_group($_groupid, $CAT['group_show'])) message($L['msg_no_right']);
 	$GRP = get_group($gid);
 	$GRP['managers'] = $GRP['manager'] ? explode('|', $GRP['manager']) : array();
 	$member = array();
